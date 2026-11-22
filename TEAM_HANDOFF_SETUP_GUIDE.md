@@ -10,7 +10,7 @@ Updated 22 November 2026. This guide covers the **current** Java Android Admin a
 | API | `EventCloudflare/` | Cloudflare Worker plus D1 schema. Public read endpoint for the User app; protected upload endpoint for Admin. |
 | User | `EventUserMaui/` | .NET MAUI app for Upcoming events, name/date search, details and persistent favourites. |
 
-GitHub repository: `https://github.com/kalunpoon926/comp1786-event-manager-coursework` (private; the owner must invite each teammate).
+GitHub repository: `https://github.com/kalunpoon926/comp1786-event-manager-coursework` (public; anyone can view and clone it).
 
 Existing cloud URL: `https://comp1786-event-cloud-api.comp1786-event-cloud.workers.dev`  
 Cloudflare account ID in `EventCloudflare/wrangler.jsonc`: `2787e3c9a306621ae7798dcdfa2d5562`  
@@ -20,13 +20,13 @@ D1 database: `comp1786-event-manager-cw` (`c6d30830-d5d1-43d6-9bea-04f5d826c53d`
 
 ## 2. Owner: grant the right access
 
-1. Invite the teammate to the private GitHub repository: **Settings → Collaborators → Add people**. They must accept the invitation before cloning. [GitHub instructions](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/repository-access-and-collaboration/inviting-collaborators-to-a-personal-repository).
+1. Anyone can view or clone the public repository. To let a teammate push directly, invite them through **Settings → Collaborators → Add people**; otherwise they can propose a pull request from a fork. [GitHub collaborator instructions](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/repository-access-and-collaboration/inviting-collaborators-to-a-personal-repository).
 2. If they will maintain or deploy the Worker, invite their own Cloudflare account under **Members** with access to this Worker and D1 database. Do not share your Cloudflare password or browser session. [Cloudflare member instructions](https://developers.cloudflare.com/fundamentals/manage-members/manage/).
 3. If they only review code or build the User app, GitHub access and the public API URL are enough. Give the Admin upload token only to someone who must upload data.
 
 ## 3. Teammate: clone and check prerequisites
 
-1. Clone the repository after accepting the invite:
+1. Clone the public repository:
 
    ```bash
    git clone https://github.com/kalunpoon926/comp1786-event-manager-coursework.git
@@ -143,7 +143,7 @@ The last cross-app test verified event upload, User display, favourite persisten
 | Admin reports no network | Restore connectivity, then use **Upload all to cloud**. Local SQLite data remains on the device. |
 | MAUI APK opens then exits | Rebuild with `EmbedAssembliesIntoApk=true` (already in the project) and install the `-Signed.apk`, not a fast-deployment-only package. |
 | Wrangler deploy targets the wrong account | Check `npx wrangler whoami` and the `account_id` in `wrangler.jsonc` before deploying. |
-| Git clone says repository not found | Accept the private repository collaborator invitation and sign in to the correct GitHub account. |
+| Git clone says repository not found | Check the URL and network connection. Cloning is public; pushing requires GitHub authentication and write access. |
 
 ## 11. Files to exclude from handoff commits
 
