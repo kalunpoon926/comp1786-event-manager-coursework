@@ -1,0 +1,1 @@
+{"name":"comp1786-event-cloud","private":true,"type":"module","scripts":{"dev":"wrangler dev","test":"node --test","deploy":"wrangler deploy","migrate:local":"wrangler d1 migrations apply comp1786-event-manager-cw --local","migrate:remote":"wrangler d1 migrations apply comp1786-event-manager-cw --remote"},"devDependencies":{"wrangler":"4.166.0"}}

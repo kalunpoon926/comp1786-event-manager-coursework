@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EventUserMaui.MainPage"
+             Title="Events" BackgroundColor="#F3F6FB">
+    <ScrollView>
+        <VerticalStackLayout Spacing="12" Padding="18,22,18,32">
+            <Border BackgroundColor="#26375D" StrokeThickness="0" Padding="20" StrokeShape="RoundRectangle 18">
+                <VerticalStackLayout Spacing="6">
+                    <Label Text="EVENTS" TextColor="#A9D6FF" FontSize="12" FontAttributes="Bold" />
+                    <Label Text="Find your next event" TextColor="White" FontSize="27" FontAttributes="Bold" />
+                    <Label Text="Browse upcoming events and keep your favourites close." TextColor="#E7F2FF" FontSize="14" />
+                </VerticalStackLayout>
+            </Border>
+            <Border BackgroundColor="White" StrokeThickness="0" Padding="16" StrokeShape="RoundRectangle 16">
+                <VerticalStackLayout Spacing="8">
+                    <Label Text="Event name" FontAttributes="Bold" />
+                    <Entry x:Name="NameEntry" Placeholder="Start typing a name" />
+                    <Label Text="Date (DD/MM/YYYY)" FontAttributes="Bold" />
+                    <Entry x:Name="DateEntry" Placeholder="e.g. 25/12/2026" Keyboard="Numeric" />
+                    <Grid ColumnDefinitions="*,*" ColumnSpacing="8">
+                        <Button Text="Search" Clicked="OnSearchClicked" BackgroundColor="#27569A" />
+                        <Button Grid.Column="1" Text="Clear" Clicked="OnClearClicked" BackgroundColor="#E9EFF8" TextColor="#26375D" />
+                    </Grid>
+                </VerticalStackLayout>
+            </Border>
+            <Grid ColumnDefinitions="*,*" ColumnSpacing="8">
+                <Button x:Name="UpcomingButton" Text="Upcoming" Clicked="OnUpcomingClicked" BackgroundColor="#26375D" />
+                <Button x:Name="FavouritesButton" Grid.Column="1" Text="Favourites (0)" Clicked="OnFavouritesClicked" BackgroundColor="#DCE7F5" TextColor="#26375D" />
+            </Grid>
+            <Label x:Name="StatusLabel" Text="Loading events…" TextColor="#566477" />
+            <VerticalStackLayout x:Name="EventList" Spacing="10" />
+            <Border BackgroundColor="White" StrokeThickness="0" Padding="16" StrokeShape="RoundRectangle 16">
+                <VerticalStackLayout Spacing="8">
+                    <Label Text="Cloud settings" FontAttributes="Bold" FontSize="16" />
+                    <Entry x:Name="ApiUrlEntry" Placeholder="https://your-worker.workers.dev" Keyboard="Url" />
+                    <Button Text="Save server" Clicked="OnSaveServerClicked" BackgroundColor="#E9EFF8" TextColor="#26375D" />
+                </VerticalStackLayout>
+            </Border>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

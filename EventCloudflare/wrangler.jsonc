@@ -1,0 +1,14 @@
+{
+  "name": "comp1786-event-cloud-api",
+  "main": "src/index.js",
+  "compatibility_date": "2026-11-22",
+  "account_id": "2787e3c9a306621ae7798dcdfa2d5562",
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "comp1786-event-manager-cw",
+      "database_id": "c6d30830-d5d1-43d6-9bea-04f5d826c53d",
+      "migrations_dir": "migrations"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+# Credentials and local config
+.env
+.env.*
+.dev.vars
+.dev.vars.*
+*PRIVATE*
+local.properties
+*.keystore
+*.jks
+
+# Node / Wrangler
+node_modules/
+.wrangler/
+
+# Android / Gradle
+.gradle/
+build/
+.idea/
+*.iml
+.cxx/
+.externalNativeBuild/
+
+# .NET MAUI
+bin/
+obj/
+.vs/
+
+# Binaries and OS files
+*.apk
+*.aab
+.DS_Store

@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Event Manager</string>
+    <string name="add_event">Add Event</string>
+    <string name="update_event">Update Event</string>
+    <string name="search_hint">Search by name or description</string>
+    <string name="event_name">Event Name *</string>
+    <string name="date_hint">Date (DD/MM/YYYY) *</string>
+    <string name="location">Location *</string>
+    <string name="organiser">Organiser *</string>
+    <string name="description">Description (Optional)</string>
+    <string name="email">Contact Email (Optional)</string>
+    <string name="phone">Contact Phone (Optional)</string>
+    <string name="sessions">Sessions</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="confirm">Confirm</string>
+    <string name="cancel">Cancel</string>
+    <string name="cloud_base_url">https://comp1786-event-cloud-api.comp1786-event-cloud.workers.dev</string>
+</resources>
